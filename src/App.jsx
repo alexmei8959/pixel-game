@@ -9,7 +9,7 @@ function App() {
   const [gameResult, setGameResult] = useState(null);
 
   return (
-    <Router>
+    <Router basename="/pixel-game">
       <div className="App">
         <Routes>
           <Route path="/" element={<Home setPlayerId={setPlayerId} />} />
