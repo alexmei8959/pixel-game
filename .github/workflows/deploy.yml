@@ -38,6 +38,9 @@ jobs:
           VITE_PASS_THRESHOLD: ${{ vars.VITE_PASS_THRESHOLD || 3 }}
           VITE_QUESTION_COUNT: ${{ vars.VITE_QUESTION_COUNT || 5 }}
 
+      - name: Create 404.html for SPA routing
+        run: cp ./dist/index.html ./dist/404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

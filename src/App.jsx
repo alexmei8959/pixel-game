@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import Home from './pages/Home';
 import Game from './pages/Game';
@@ -9,7 +9,7 @@ function App() {
   const [gameResult, setGameResult] = useState(null);
 
   return (
-    <Router>
+    <Router basename="/pixel-game/">
       <div className="App">
         <Routes>
           <Route path="/" element={<Home setPlayerId={setPlayerId} />} />
